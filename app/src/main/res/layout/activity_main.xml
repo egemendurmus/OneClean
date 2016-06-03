@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    tools:context="com.example.egemendurmus.oneclean.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="65dp"
+        android:layout_alignParentRight="true"
+        android:hint="  E-Mail Adresiniz"
+        android:drawableLeft="@drawable/mailicon"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/login_button"
+        android:layout_alignStart="@+id/login_button" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Şifreniz"
+
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="38dp"
+        android:drawableLeft="@drawable/pass_icon"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_alignLeft="@+id/login_button"
+        android:layout_alignStart="@+id/login_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login with Email"
+        android:id="@+id/button"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
+        android:background="@drawable/loginbutton" />
+
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="53dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <com.facebook.login.widget.LoginButton
+        xmlns:facebook="http://schemas.android.com/apk/res-auto"
+
+        android:id="@+id/login_button"
+        android:layout_width="150dp"
+        android:background="@drawable/background"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/btn_sign_in"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        facebook:com_facebook_login_text=""
+
+        android:layout_alignBottom="@+id/btn_sign_in" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Login as guest"
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btn_sign_in"
+        android:layout_alignEnd="@+id/btn_sign_in" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Dont have an account?"
+        android:id="@+id/textView2"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/button"
+        android:layout_toLeftOf="@+id/btn_sign_in"
+        android:layout_toStartOf="@+id/btn_sign_in"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Signup here"
+        android:id="@+id/textView3"
+        android:textColor="#3157ff"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignLeft="@+id/btn_sign_in"
+        android:layout_alignStart="@+id/btn_sign_in"
+
+        android:onClick="onClick"
+        android:clickable="true"
+        android:paddingLeft="5dp" />
+
+
+
+</RelativeLayout>
